@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuard - Security Log Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🛡 CyberGuard</h1>
+            <p>Security Log Analyzer & Threat Detection Tool</p>
+        </header>
+
+        <main>
+
+            <div class="card">
+
+                <h2>Analyze Security Logs</h2>
+
+                <p class="description">
+                    Paste system or security logs below to detect suspicious
+                    activities and potential security threats.
+                </p>
+
+                <textarea
+                    id="logInput"
+                    placeholder="Paste your security logs here...
+
+Example:
+Failed password for admin
+Failed login attempt
+Unauthorized access detected
+Suspicious IP connection"></textarea>
+
+                <button onclick="analyzeLogs()">
+                    Analyze Logs
+                </button>
+
+            </div>
+
+
+            <div class="results-card">
+
+                <h2>Analysis Results</h2>
+
+                <div class="result-grid">
+
+                    <div class="result-box">
+                        <h3 id="failedCount">0</h3>
+                        <p>Failed Login Attempts</p>
+                    </div>
+
+                    <div class="result-box">
+                        <h3 id="suspiciousCount">0</h3>
+                        <p>Suspicious Events</p>
+                    </div>
+
+                    <div class="result-box">
+                        <h3 id="riskLevel">Safe</h3>
+                        <p>Risk Level</p>
+                    </div>
+
+                </div>
+
+                <div class="threat-section">
+
+                    <h3>Detected Threats</h3>
+
+                    <ul id="threatList">
+                        <li>No analysis performed yet.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <p>CyberGuard © 2026 | Cybersecurity Learning Project</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
